@@ -21,12 +21,11 @@ public class Guest {
         return this.room > 0;
     }
 
+    public void setRoomNumber(int room) {
+        this.room = room;
+    }
 
-//    if (!checkedIn){
-//        this.room = 0;
-//    } else {
-//        this.room = bedroom.get
-//    }
-
-
+    public int checkRoomNumber(){
+        return this.room;
+    }
 }

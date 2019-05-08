@@ -29,6 +29,10 @@ public class Bedroom {
         return this.guests.size() >  0;
     }
 
+    public void addGuest(Guest guest){
+        this.guests.add(guest);
+    }
+
 //    public int checkNumberOfGuests(){
 //        return this.guests.size();
 //    }

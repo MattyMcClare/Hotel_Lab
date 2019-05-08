@@ -6,6 +6,7 @@ import static org.junit.Assert.assertEquals;
 public class BedroomTest {
 
     Bedroom bedroom;
+    Guest guest;
 
     @Before
     public void before(){
@@ -30,6 +31,13 @@ public class BedroomTest {
     @Test
     public void checkStartEmpty(){
         assertEquals(false, bedroom.checkIfOccupied());
+    }
+
+    @Test
+    public void canAddGuest(){
+        guest = new Guest("david", 27, 0);
+        bedroom.addGuest(guest);
+        assertEquals(1, bedroom.checkCapacity());
     }
 
 }

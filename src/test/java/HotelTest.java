@@ -32,7 +32,7 @@ public class HotelTest {
         dinings.add(dining1);
         dinings.add(dining2);
         gyms.add(gym1);
-        hotel = new Hotel("Hilton", 50, bedrooms, dinings, gyms);
+        hotel = new Hotel("Hilton", bedrooms, dinings, gyms);
 
     }
 
@@ -42,13 +42,7 @@ public class HotelTest {
     }
 
     @Test
-    public void hasCapacity(){
-        assertEquals(50, hotel.getCapacity());
-    }
-
-    @Test
-    public void hasBedrooms(){ assertEquals(3, hotel.bedroomCount());
-    }
+    public void hasBedrooms(){ assertEquals(3, hotel.bedroomCount()); }
 
     @Test
     public void hasDinings(){ assertEquals(2, hotel.diningsCount()); }
