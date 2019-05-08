@@ -21,6 +21,10 @@ public class Bedroom {
         return capacity;
     }
 
+    public int numberOfGuests() {
+        return guests.size();
+    }
+
     public String getType() {
         return type;
     }
@@ -33,7 +37,7 @@ public class Bedroom {
         this.guests.add(guest);
     }
 
-//    public int checkNumberOfGuests(){
-//        return this.guests.size();
-//    }
+    public void removeGuest(Guest guest) {
+        this.guests.remove(guest);
+    }
 }

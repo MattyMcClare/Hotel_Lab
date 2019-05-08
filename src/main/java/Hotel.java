@@ -30,12 +30,27 @@ public class Hotel {
         return this.gyms.size();
     }
 
-    public void checkInGuest(Guest guest, Bedroom bedroom) {
+    public boolean checkInGuest(Guest guest, Bedroom bedroom) {
         if(!bedroom.checkIfOccupied()) {
             bedroom.addGuest(guest);
-            guest.setRoomNumber(bedroom.getRoomNumber());
+            return true;
         } else {
-            System.out.println("Sorry, No Rooms Available");
+            return false;
         }
     }
+    public boolean checkOutGuest(Guest guest, Bedroom bedroom){
+        if(bedroom.checkIfOccupied()){
+            bedroom.removeGuest(guest);
+            return true;
+        } else {
+          return false;
+        }
+    }
+
+    //public Bedroom findRoomByGuest(Guest guest) {
+//        foundBedroom = null
+//        loop  over  bedrooms
+    // if bedroom contains guest foundBedroom = bedroom
+//        return foundBedroom
+    //}
 }
