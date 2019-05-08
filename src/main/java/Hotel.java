@@ -8,12 +8,12 @@ public class Hotel {
     private ArrayList<Dining> dinings;
     private ArrayList<Gym> gyms;
 
-    public Hotel(String name, int capacity) {
+    public Hotel(String name, int capacity, ArrayList<Bedroom> bedrooms, ArrayList<Dining> dinings, ArrayList<Gym> gyms) {
         this.name = name;
         this.capacity = capacity;
-        this.bedrooms = new ArrayList<>();
-        this.dinings = new ArrayList<>();
-        this.gyms = new ArrayList<>();
+        this.bedrooms = bedrooms;
+        this.dinings = dinings;
+        this.gyms = gyms;
     }
 
     public String getName() {
@@ -24,12 +24,19 @@ public class Hotel {
         return capacity;
     }
 
-
     public int bedroomCount() {
         return this.bedrooms.size();
     }
 
-    public void addBedroom(Bedroom bedroom) {
-        this.bedrooms.add(bedroom);
+    public int diningsCount() {
+        return this.dinings.size();
     }
+
+    public int gymCount() {
+        return this.gyms.size();
+    }
+
+//    public void addBedroom(Bedroom bedroom) {
+//        this.bedrooms.add(bedroom);
+//    }
 }
