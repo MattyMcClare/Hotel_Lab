@@ -30,7 +30,12 @@ public class Hotel {
         return this.gyms.size();
     }
 
-//    public void addBedroom(Bedroom bedroom) {
-//        this.bedrooms.add(bedroom);
-//    }
+    public void checkInGuest(Guest guest, Bedroom bedroom) {
+        if(!bedroom.checkIfOccupied()) {
+            bedroom.addGuest(guest);
+            guest.setRoomNumber(bedroom.getRoomNumber());
+        } else {
+            System.out.println("Sorry, No Rooms Available");
+        }
+    }
 }
