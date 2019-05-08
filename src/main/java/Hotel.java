@@ -46,11 +46,10 @@ public class Hotel {
           return false;
         }
     }
-
     //public Bedroom findRoomByGuest(Guest guest) {
-//        foundBedroom = null
-//        loop  over  bedrooms
-    // if bedroom contains guest foundBedroom = bedroom
-//        return foundBedroom
+    //foundBedroom = null
+    //loop  over  bedrooms
+    //if bedroom contains guest foundBedroom = bedroom
+    //return foundBedroom
     //}
 }
